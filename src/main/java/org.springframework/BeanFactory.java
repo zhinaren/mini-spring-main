@@ -7,7 +7,7 @@ public class BeanFactory {
     private static final Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
 
     public static Object getBean(String name) {
-        return beanDefinitionMap.get(name);
+        return beanDefinitionMap.get(name).getBean();
     }
 
     public static void registerBeanDefinition(String name, BeanDefinition beanDefinition) {
